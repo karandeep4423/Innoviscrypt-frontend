@@ -12,8 +12,8 @@ const Navbar = () => {
     <div className=" ">
       <nav className=" flex justify-between h-20 px-4 xl:px-0 max-w-screen-xl m-auto     ">
         <NavLink to="/">
-          <div className="my-5 text-2xl font-medium h-fit w-[180px] border-4 px-0 text-center border-black">
-            <h2>InnoviScrypt</h2>
+          <div className="my-5 h-fit w-[180px] px-0 ">
+            <img src="innvo-logo.jpg"></img>
           </div>
         </NavLink>
         <div className="flex items-center lg:hidden">
@@ -59,7 +59,7 @@ const Navbar = () => {
         >
           <NavLink
             className={(e) => {
-              return e.isActive ? "bg-red-200" : "";
+              return e.isActive ? "rounded-lg border-2 bg-sky-300 w-fit h-fit p-2" : "";
             }}
             onClick={handleShow}
             to="/"
@@ -68,7 +68,7 @@ const Navbar = () => {
           </NavLink>
           <NavLink
             className={(e) => {
-              return e.isActive ? "bg-red-200" : "";
+              return e.isActive ? "rounded-lg border-2 bg-sky-300 w-fit h-fit p-2" : "";
             }}
             onClick={handleShow}
             to="/about"
@@ -77,7 +77,7 @@ const Navbar = () => {
           </NavLink>
           <NavLink
             className={(e) => {
-              return e.isActive ? "bg-red-200" : "";
+              return e.isActive ? "rounded-lg border-2 bg-sky-300 w-fit h-fit p-2" : "";
             }}
             onClick={handleShow}
             to="/pricing"
@@ -86,7 +86,7 @@ const Navbar = () => {
           </NavLink>
           <NavLink
             className={(e) => {
-              return e.isActive ? "bg-red-200" : "";
+              return e.isActive ? "rounded-lg border-2 bg-sky-300 w-fit h-fit p-2" : "";
             }}
             onClick={handleShow}
             to="/about-us"
@@ -95,7 +95,7 @@ const Navbar = () => {
           </NavLink>
           <NavLink
             className={(e) => {
-              return e.isActive ? "bg-red-200" : "";
+              return e.isActive ? "rounded-lg border-2 bg-sky-300 w-fit h-fit p-2" : "";
             }}
             onClick={handleShow}
             to="/history"
@@ -104,7 +104,7 @@ const Navbar = () => {
           </NavLink>
           <NavLink
             className={(e) => {
-              return e.isActive ? "bg-red-200" : "";
+              return e.isActive ? "rounded-lg border-2 bg-sky-300 w-fit h-fit p-2" : "";
             }}
             onClick={handleShow}
             to="/the-app"

@@ -4,9 +4,8 @@ const Footer = () => {
   return (
     <div className="mt-10 bg-slate-100">
       <div className="pt-5 max-w-screen-xl m-auto flex flex-wrap space-x-5 px-5 justify-evenly">
-        <h2 className=" font-medium text-xl border-4 border-blue-200 h-fit w-fit p-2">
-          InnoviScrypt
-        </h2>
+        <img src="innvo-logo.jpg" className="my-5 h-fit w-[180px] px-0">
+        </img>
         <div className="flex flex-col gap-4">
           <p>SIGN UP TO OUR NEWSLETTER</p>
           <div className="flex flex-row gap-4">

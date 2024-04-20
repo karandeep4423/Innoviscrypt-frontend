@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-
+import Faqs from "../components/Faqs";
 const Pricing = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleClick = () => {
-    setIsOpen(!isOpen);
+  const handleClick = (i) => {
+    if(isOpen==i){
+      return setIsOpen(null);
+    }
+      setIsOpen(i);
   };
 
   return (
@@ -187,70 +190,60 @@ const Pricing = () => {
             ABOUT INNOVISCRYPT
           </p>
         </div>
-        <div className="flex gap-4 flex-col">
-          <div onClick={handleClick} className="bg-gray-200 h-fit W-full mx-10">
-            <div className="h-fit  flex justify-between px-5">
-              <h2 className="text-2xl my-6 font-bold">
-                How does the AI-powered e-book creation work ?
-              </h2>
-              {isOpen ? (
-                <svg
-                  class="my-6 w-10 h-10 text-black "
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  fill="none"
-                  viewBox="0 0 24 24"
+        <div>
+          {Faqs.map((f, i) => {
+            return (
+              <div key={i} className="flex gap-4 flex-col">
+                <div
+                  onClick={()=>handleClick(i)}
+                  className="bg-gray-200 h-fit W-full mx-10"
                 >
-                  <path
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="m5 15 7-7 7 7"
-                  />
-                </svg>
-              ) : (
-                <svg
-                  className="my-6 w-10 h-10 text-black "
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="m19 9-7 7-7-7"
-                  />
-                </svg>
-              )}
-            </div>
+                  <div className="h-fit  flex justify-between px-5">
+                    <h2 className="text-2xl my-6 font-bold">{f.question}</h2>
+                    {isOpen ==i ? (
+                      <svg
+                        class="my-6 w-10 h-10 text-black "
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="m5 15 7-7 7 7"
+                        />
+                      </svg>
+                    ) : (
+                      <svg
+                        className="my-6 w-10 h-10 text-black "
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="m19 9-7 7-7-7"
+                        />
+                      </svg>
+                    )}
+                  </div>
 
-            {isOpen ? (
-              <p className="p-5">
-                Our AI-powered e-book creation process is designed to be as
-                intuitive and user-friendly as possible. You start by entering
-                specific details about your desired e-book, including the genre,
-                theme, and writing style, which can be aligned with a reference
-                artist of your choice. You also select the language, the title
-                of your book, and provide direction on the book's overall tone
-                and structure, especially if you are on our Standard or Premium
-                pricing plans.Then, you can determine the structure of your
-                content by specifying the number of chapters and subchapters.
-                Our sophisticated AI takes all this information and crafts
-                content tailored to your inputs, generating your e-book with
-                precision and creativity.
-              </p>
-            ) : (
-              ""
-            )}
-          </div>
+                  {isOpen==i ? <p className="p-5">{f.answer}</p> : ""}
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>
