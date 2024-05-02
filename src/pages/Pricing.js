@@ -12,7 +12,7 @@ const Pricing = () => {
   };
 
   return (
-    <div>
+    <div className="max-w-screen-xl m-auto">
       <div className="my-12">
         <h1 className="text-5xl mx-4 text-gray-700 font-bold text-center">
           Unlock Your Publishing Potential
@@ -22,7 +22,7 @@ const Pricing = () => {
           Today!
         </p>
       </div>
-      <div className="max-w-screen-xl text-lg xl:text-xl  m-auto grid mt-16 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-6 md:px-10 ">
+      <div className="text-lg xl:text-xl  grid mt-16 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-6 md:px-10 ">
         <div
           id="book-lesson"
           className="text-gray-600 bg-slate-200 justify-center h-fit py-10  gap-y-2 flex flex-col items-center rounded-xl shadow-[5px_5px_0px_4px_rgba(2,139,199,0.5),_-5px_-5px_0px_rgba(2,139,199,0.5)]"

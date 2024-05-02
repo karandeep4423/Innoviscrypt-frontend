@@ -54,7 +54,7 @@ const Navbar = () => {
         </div>
         <div
           className={`lg:space-x-6 gap-y-4 text-lg  absolute  justify-between flex flex-col items-center lg:flex-row  z-50  lg:static  lg:w-auto lg:py-0 pb-6  w-full left-0 ${
-            open ? "hidden lg:flex " : "top-[64px] bg-indigo-100 pt-6"
+            open ? "hidden lg:flex" : "top-[64px] bg-indigo-100 pt-6"
           }`}
         >
           <NavLink
@@ -89,7 +89,7 @@ const Navbar = () => {
               return e.isActive ? "rounded-lg border-2 bg-sky-300 w-fit h-fit p-2" : "";
             }}
             onClick={handleShow}
-            to="/about-us"
+            to="/affiliation"
           >
             Affiliation
           </NavLink>
